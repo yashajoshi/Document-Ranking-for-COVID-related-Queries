@@ -1,0 +1,15 @@
+prefix = "." # tells MeTA where to search for datasets
+
+dataset = "covid_ir" # a subfolder under the prefix directory
+corpus = "tutorial.toml" # a configuration file for the corpus specifying its format & additional args
+
+index = "covid_ir-idx" # subfolder of the current working directory to place index files
+
+query-judgements = "covid_ir/covid_ir-qrels.txt" # file containing the relevance judgments for this dataset
+
+stop-words = "lemur-stopwords.txt"
+
+[[analyzers]]
+method = "ngram-word"
+ngram = 1
+filter = "default-unigram-chain"
